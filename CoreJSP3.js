@@ -21,11 +21,13 @@ log();
 
 // TASK 3
 function sortArr(arr){
-    return arr.sort();
+    return arr.sort((a, b) => {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
 }
 
 log("TASK 3:");
-log(sortArr(['zzz', 'ccc', 'aaa', 'bbb', 'yyy']));
+log(sortArr(['ZZZ', 'ccc', 'aaa', 'bbb', 'yyy']));
 log();
 
 // TASK 4
@@ -66,7 +68,15 @@ log();
 function showScope(){
     const private = 'private';
     public = 'public';
-    return `${private} ${public}`;
+    if(true){
+        const p1 = 'const';
+        var p2 = 'var';
+    }
+    
+    //const p3 = p1; // RefferenceError
+    const p3 = p2; // private public var
+
+    return `${private} ${public} ${p3}`;
 }
 /*
     I declared two variables in the function ('private', 'public').
