@@ -1,0 +1,74 @@
+/* Reset default margins and paddings */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply some basic styling to the elements */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #0059ff;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  aside {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 30%;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+    
+    aside {
+      width: 100%;
+    }
+  }
+  
