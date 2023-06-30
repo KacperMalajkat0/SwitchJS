@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3</title>
+</head>
+<body>
+    
+    <p id="browser-info"></p>
+
+    <style>
+        body {background-color: black;}
+        p {
+            font-family: monospace;
+            color: green;
+        }
+    </style>
+
+    <script>
+        const browserName = window.navigator.userAgent;
+        const browserVersion = window.navigator.appVersion;
+
+        const browserInfo = `Browser Name: ${browserName}<br>Browser Version: ${browserVersion}`;
+        document.getElementById("browser-info").innerHTML = browserInfo;
+    </script>
+</body>
+</html>

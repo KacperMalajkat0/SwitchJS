@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T4</title>
+</head>
+<body>
+    
+    <p id="screen-info"></p>
+
+    <style>
+        body {background-color: black;}
+        p {
+            font-family: monospace;
+            color: green;
+        }
+    </style>
+
+    <script>
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+
+        const screenInfo = `Screen width: ${screenWidth}<br>Screen height: ${screenHeight}`;
+        document.getElementById("screen-info").innerHTML = screenInfo;
+    </script>
+</body>
+</html>
