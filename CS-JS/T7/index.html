@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T7</title>
+</head>
+<body>
+    <p>P1</p>
+    <h1>H1</h1>
+    <p>P2</p>
+    <h1>H2</h1>
+    <p>P3</p>
+    
+    <button>Highlight Paragraphs</button>
+        
+    <style>
+        .highlight{background-color: yellow;}
+    </style>
+
+    <script>
+        const button = document.querySelector('button');
+        let isClicked = false;
+
+        button.addEventListener('click', () => {
+            if(!isClicked){
+                const paragraphs = document.querySelectorAll('p');
+                paragraphs.forEach((paragraph) => {
+                    paragraph.classList.add('highlight');
+                });
+                isClicked = true;
+            } else {
+                const paragraphs = document.querySelectorAll('p');
+                paragraphs.forEach((paragraph) => {
+                    paragraph.classList.remove('highlight');
+                });
+                isClicked = false;
+            }
+            
+        });
+    </script>
+
+</body>
+</html>

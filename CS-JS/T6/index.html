@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T6</title>
+</head>
+<body>
+    <button>Set Cookie</button>
+    <p id="cookieList"></p>
+
+    <style>
+        body{background-color: black;}
+        p{font-family: monospace; color: green;}
+    </style>
+
+
+    <script>
+        const button = document.querySelector('button');
+        const cookieList = document.getElementById('cookieList');
+        let index = 1;
+        let c = 'Cookie';
+        button.addEventListener('click', () => {
+            document.cookie = `${c}${index}=${index};`;
+            index += 1;
+            cookieList.innerText = document.cookie;
+        });
+    </script>
+
+</body>
+</html>

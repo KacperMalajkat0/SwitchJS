@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T9</title>
+</head>
+<body>
+    
+    <div id="myDiv">Hello World</div>
+    <p id="attrList"></p>
+    <button>Change Background Color</button>
+
+
+    <style>
+        body{background-color: black;}
+        #myDiv{font-family: monospace;color: green;}
+        p{font-family: monospace;color: green;}
+    </style>
+
+    <script>
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            const myDiv = document.getElementById('myDiv');
+            myDiv.style.backgroundColor = 'red';
+            myDiv.setAttribute('attr', 13);
+            let text = myDiv.getAttribute('attr');
+            document.getElementById('attrList').innerText = text;
+        });
+    </script>
+
+</body>
+</html>
